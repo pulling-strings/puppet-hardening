@@ -1,5 +1,5 @@
-# iptables based ssh connections rate limit
-class baseline::hardening::ssh_ratelimit($allowed_host=''){
+# iptables based ssh connections rate limit (using ufw)
+class hardening::ssh_ratelimit($allowed_host=''){
   include ufw
   $before = "\# don't delete the 'COMMIT' line or these rules won't be processed"
 

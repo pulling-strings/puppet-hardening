@@ -1,6 +1,6 @@
 # SSH hardening see:
 #  http://bodhizazen.net/Tutorials/SSH_security 
-class baseline::hardening::ssh($user,$strict=false){
+class hardening::ssh($user,$strict=false){
   file_line { 'disable ssh protocol 1':
     path => '/etc/ssh/ssh_config',
     line => 'Protocol 2'
