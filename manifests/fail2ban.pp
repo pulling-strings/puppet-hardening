@@ -1,5 +1,8 @@
-# fail2ban setup
-class hardening::fail2ban($ignoreip=[]) {
+# fail2ban setup, by default we ban forever
+class hardening::fail2ban(
+  $ignoreip=[],
+  $bantime='-1'
+) {
   
   package{'fail2ban':
     ensure  => present
